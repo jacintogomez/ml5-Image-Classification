@@ -25,7 +25,7 @@ function gotresults(error,results){
 function imageready(){image(img,0,0,width,height);}
 function setup(){
     createCanvas(640,480);
-    let imgname='img/zebras.jpg'
+    let imgname='img/lamppost.jpg'
     img=createImg(imgname,imageready);
     img.hide();
     background(0);
