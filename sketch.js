@@ -30,7 +30,7 @@ function draw(){
 //function imageready(){image(img,0,0,width,height);}
 function setup(){
     createCanvas(640,480);
-    let imgname='img/sloth.jpg'
+    //let imgname='img/sloth.jpg'
     video=createCapture(VIDEO);
     video.hide();
     background(0);
