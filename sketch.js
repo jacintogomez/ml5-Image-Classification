@@ -1,5 +1,6 @@
 let mobilenet;
 let img;
+img.crossOrigin='Anonymous';
 
 function modelready(){
     console.log('Model is ready!');
@@ -25,7 +26,7 @@ function gotresults(error,results){
 function imageready(){image(img,0,0,width,height);}
 function setup(){
     createCanvas(640,480);
-    let imgname='img/lamppost.jpg'
+    let imgname='img/sloth.jpg'
     img=createImg(imgname,imageready);
     img.hide();
     background(0);
