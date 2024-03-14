@@ -15,7 +15,9 @@ function gotresults(error,results){
         label=results[0].label;
         prob=results[0].confidence.toFixed(3);
         console.log('Done');
-        setTimeout(mobilenet.predict(gotresults),1000);
+        setTimeout(function(){
+            mobilenet.predict(gotresults);
+        },1000);
     }
 }
 
