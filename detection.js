@@ -25,6 +25,6 @@ function gotdetections(error,results){
 
 function setup(){
     createCanvas(640,480);
-    image(img,0,0,width,height);
+    image(img,0,0);
     detector.detect(img,gotdetections);
 }
