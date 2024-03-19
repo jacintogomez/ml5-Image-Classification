@@ -23,7 +23,7 @@ function gotdetections(error,results){
         darr=results;
         setTimeout(function(){
             detector.detect(video,gotdetections);
-        },1000);
+        },100);
         //detector.detect(video,gotdetections);
     }
 }
