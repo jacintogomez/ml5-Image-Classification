@@ -7,6 +7,15 @@ function preload(){
     detector=ml5.objectDetector('cocossd');
 }
 
+function modelready(){
+    console.log('Model is ready!');
+    begindet();
+}
+
+function begindet(){
+    detector.detect(video,gotdetections);
+}
+
 function gotdetections(error,results){
     if(error){console.error(error);}
     else{
@@ -24,7 +33,8 @@ function setup(){
     video=createCapture(VIDEO);
     video.size(640,480);
     video.hide();
-    detector.detect(video,gotdetections);
+    detectobjects=detector.detect(video,modelready);
+    video.elt.addEventListener('loadeddata', begindet);
 }
 
 function draw(){
