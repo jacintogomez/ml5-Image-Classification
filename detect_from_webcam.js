@@ -1,20 +1,22 @@
 let video;
 let detector;
-let detections=[];
+let darr=[]; //detection array
 //img.crossOrigin='Anonymous';
 
 function preload(){
-    //img=loadImage('img/puffin.jpg');
     detector=ml5.objectDetector('cocossd');
 }
 
 function gotdetections(error,results){
     if(error){console.error(error);}
-    console.log(results);
-    detections=results;
-    setTimeout(function(){
-        detector.detect(video,gotdetections);
-    },1000);
+    else{
+        console.log(results);
+        darr=results;
+        setTimeout(function(){
+            detector.detect(video,gotdetections);
+        },1000);
+        //detector.detect(video,gotdetections);
+    }
 }
 
 function setup(){
@@ -27,8 +29,8 @@ function setup(){
 
 function draw(){
     image(video,0,0);
-    for(let i=0;i<detections.length;i++){
-        let ob=detections[i];
+    for(let i=0;i<darr.length;i++){
+        let ob=darr[i];
         let xnorm=ob.normalized.x*width;
         let ynorm=ob.normalized.y*height;
         let wnorm=ob.normalized.width*width;
