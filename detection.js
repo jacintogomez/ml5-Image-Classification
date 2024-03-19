@@ -3,7 +3,7 @@ let detector;
 //img.crossOrigin='Anonymous';
 
 function preload(){
-    img=loadImage('img/jack.jpeg');
+    img=loadImage('img/puffin.jpg');
     detector=ml5.objectDetector('cocossd');
 }
 
@@ -23,7 +23,7 @@ function gotdetections(error,results){
         noStroke();
         fill(255);
         textSize(24);
-        text(ob.label+', '+(ob.confidence*100).toFixed(2)+'% confidence',xnorm+10,ynorm+24);
+        text(ob.label+', with '+(ob.confidence*100).toFixed(2)+'% confidence',xnorm+10,ynorm+24);
     }
 }
 
