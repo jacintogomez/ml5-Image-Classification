@@ -1,6 +1,6 @@
 # ml5 Object Classification
 
-Adaptation of a demo video I watched on using the ml5 library. This project has 4 functionalities:\
+Adaptation of a demo video I watched on using the ml5 library. This project has 4 functionalities:
 
 `sketch.js` Label uploaded image with confidence score\
 `webcam.js` Label webcam stream with confidence score\
