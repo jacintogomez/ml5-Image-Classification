@@ -6,20 +6,31 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.dom.min.js"></script>
     <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
-    <script src="detection.js"></script>
+    <script src="detect_from_webcam.js"></script>
     <style>
+        body{
+            text-align: center;
+            margin: 3%;
+        }
         .viewbox{
             display: flex;
-            align-items: center;
+            align-content: center;
+            justify-content: center;
             background-color: black;
+            margin: 5%;
+            border-radius: 30px;
         }
-        .camera{
+        canvas{
             flex: 1;
-            padding: 3%;
+            margin: 5%;
+            border-radius: 30px;
+            background-color: gray;
+            visibility: visible !important;
         }
     </style>
 </head>
 <body>
+    <h1>Object Classification with ml5</h1>
     <div class="viewbox">
         <div class="camera" id="content">
 

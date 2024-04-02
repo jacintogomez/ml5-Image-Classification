@@ -29,7 +29,8 @@ function gotdetections(error,results){
 
 function setup(){
     createCanvas(640,480);
+    //canvas.parent('content');
     image(img,0,0,width,height);
     detector.detect(img,gotdetections);
-    document.getElementById('content').appendChild(img);
+    document.getElementById('content').appendChild(canvas);
 }

@@ -1,7 +1,7 @@
 let video;
 let detector;
 let darr=[]; //detection array
-//img.crossOrigin='Anonymous';
+img.crossOrigin='Anonymous';
 
 function preload(){
     detector=ml5.objectDetector('cocossd');
@@ -29,13 +29,17 @@ function gotdetections(error,results){
 }
 
 function setup(){
-    createCanvas(640,480);
+    const ht=480;
+    const wd=640;
+    createCanvas(wd,ht);
     video=createCapture(VIDEO);
-    video.size(640,480);
+    video.size(wd,ht);
     video.hide();
     detectobjects=detector.detect(video,modelready);
     video.elt.addEventListener('loadeddata', begindet);
-    document.getElementById('content').appendChild(video.elt);
+    document.getElementById('content').appendChild(canvas);
+    document.getElementById('content').height=ht;
+    document.getElementById('content').width=wd;
 }
 
 function draw(){
