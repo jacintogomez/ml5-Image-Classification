@@ -35,6 +35,7 @@ function setup(){
     video.hide();
     detectobjects=detector.detect(video,modelready);
     video.elt.addEventListener('loadeddata', begindet);
+    document.getElementById('content').appendChild(video.elt);
 }
 
 function draw(){

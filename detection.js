@@ -31,4 +31,5 @@ function setup(){
     createCanvas(640,480);
     image(img,0,0,width,height);
     detector.detect(img,gotdetections);
+    document.getElementById('content').appendChild(img);
 }
