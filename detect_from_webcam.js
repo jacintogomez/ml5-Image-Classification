@@ -3,8 +3,8 @@ let detector;
 let darr=[]; //detection array
 img.crossOrigin='Anonymous';
 
-function preload(){
-    detector=ml5.objectDetector('cocossd');
+async function preload(){
+    detector=await ml5.objectDetector('cocossd');
 }
 
 function modelready(){
